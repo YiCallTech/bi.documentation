@@ -78,8 +78,10 @@
 | number | 数量 | Number | 否 |  |
 | numberStyle | 数量样式 | Object | 否 |  |
 | numberStyle1 | 第二种数量样式 | Object | 否 |  |
-| showSign | 是否展示正负号 | Boolean | 否 | false |
+| showSign | 是否展示正号 | Boolean | 否 | false |
 | showUnit | 是否展示单位 | Boolean | 否 | false |
+| showTooltip | 是否展示Tooptip | Boolean | 否 | false |
+| tooltipStyle | Tooptip样式 | Object | 否 | false |
 | unit | 单位 | String | 否 |  |
 | unitStyle | 单位样式 | Object | 否 |  |
 | unitStyle1 | 第二种单位样式 | Object | 否 |  |
