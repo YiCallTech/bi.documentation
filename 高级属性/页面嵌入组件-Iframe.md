@@ -23,4 +23,6 @@
 | config | 组件配置 | 否 | object | 参考Schema.config |
 
 ## Schema.config
-| url | 页面地址 | 是 | string |  |
+| 名称 | 描述 | 必填 | 类型 | 默认值 |
+| name | 页面标题 | 否 | string |  |
+| url | 页面链接 | 否 | string |  |
