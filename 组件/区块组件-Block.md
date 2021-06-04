@@ -69,8 +69,7 @@
 | name | 区块标题名称 | String| 否 |  |
 | align | 对其方式 left bottom right | String| 否 |  |
 | blockType | block类型 square、rectangle | String | 否 | square |
-| iconType | 图标类型 img，antd | String | 否 | img |
-| icon | iconType - img：需要传图片url；antd：antd的icon type |  String | 否 |  |
+| icon | 图片url |  String | 否 |  |
 | iconStyle | 图标样式 | Object | 否 |  |
 | backgroundImage | 背景图片 - 需要传图片url |  String | 否 |  |
 
