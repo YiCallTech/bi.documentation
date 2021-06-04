@@ -12,13 +12,12 @@
   }
 ```
 
-## Schema：
+## schema说明：
 | 参数名称 | 参数说明 | 数据类型 | 是否必填 | 默认值 |
 |--|--|--|--| -- |
 | name | 区块标题名称 | String| 否 |  |
 | align | 页面布局对齐方式 left bottom right | String| 否 |  |
-| icon | iconType - img：需要传图片url；antd3.X：antd的icon type |  String | 否 |  |
-| iconType | 图标类型 img，antd | String | 否 | img |
+| icon | 图片url |  String | 否 |  |
 | iconStyle | 图标样式 | Object | 否 |  |
 | blockType | block类型 square、rectangle | String | 否 | square |
 | backgroundImage | 背景图片 - 需要传图片url |  String | 否 |  |

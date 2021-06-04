@@ -132,7 +132,7 @@
 | activeColor | 高亮时字体边框颜色 | 否 | string | 仅支持：radio、tab |
 | data | 可选数据/url地址 | 否 | array | select、radio、tab、link为必填，link时为url地址，详见schema.filter.data |
 
-#### schema.config.filter.data:
+###### filter.data:
 | 名称 | 描述 | 必填 | 类型 |备注 |
 |--|--|--|--|--|
 | name | 可选项名称 | 是 | string |  |
