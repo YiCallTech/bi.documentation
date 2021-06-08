@@ -1,37 +1,36 @@
 # schema
-```
+```json
 {
-  "type": "header",
-  "frontendId": "header",
-  "dataUrl": "https://control.hzxc.gov.cn/dxx/Community-Module/V2/Weather",
-  "postData": {},
-  "config": {
-    "title": "灯芯巷社区驾驶舱",
-    "isWeather": true,
-    "isTime": true,
-    "isLightSpot": true,
-  }
+  "title": "灯芯巷社区驾驶舱",
+  "isWeather": true,
+  "isTime": true,
+  "isToggleContent": true,
+  "isLightSpot": true,
+  "background": "",
+  "titleStyle": {},
+  "timeStyle": {}
 }
 ```
 
-#### 数据说明:
+# 请求结果
+```json
+{
+    "temperature": 28,
+    "weatherType": "晴天",
+}
+```
 
-| 名称 | 描述 | 必填 | 类型 | 备注 |
-|--|--|--|--|--|
-| type | 组件类型 | 是 | string | 前端根据schema的type识别组件 |
-| frontendId | 组件id | 是 | string | 唯一的key值 |
-| dataUrl | 接口地址 | 否 | string | 用于获取天气数据，isWeather为false时不调用 |
-| postData | 请求时的特定数据 | 否 | object | 自定义 |
-| refreshInterval | 定时刷新时间 | 否 | number | 毫秒，大于999 |
-| config | 组件配置 | 否 | object | 参考Schema.config |
-
-#### Schema.config
+#### Schema说明:
 | 名称 | 描述 | 必填 | 类型 | 备注 |
 |--|--|--|--| -- |
 | title | 标题 | 是| string | |
 | isWeather | 是否展示天气 | 否 | bool | |
 | isTime | 是否显示时间| 否 | bool | |
+| isToggleContent | 是否可以隐藏驾驶舱内容 | 否 | bool | |
 | isLightSpot | 是否显示光点 | 否 | bool | |
+| background | 背景颜色 | 是| string | |
+| titleStyle | 标题样式 | 否 | object | react-css |
+| timeStyle | 时间样式 | 否 | object | react-css |
 
 #### 返回数据说明:
 
@@ -39,9 +38,4 @@
 |--|--|--|--|--|
 | temperature | 温度 | 是 | number | |
 | weatherType | 天气类型 | 是 | string |  |
-```
-{
-    "temperature": 28,
-    "weatherType": "晴天",
-}
-```
+
