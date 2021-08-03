@@ -2,78 +2,78 @@
 
 ```json
 {
-  "type": "tabs",
-  "frontendId": "ka3s545432323545433kwg4rod4",
-  "width": 20,
-  "height": 60,
-  "left": 10,
-  "top": 10,
-  "config": {
-    "direction": "column",
-    "tabStyle": {
+  "tabsType": "type1",
+  "direction": "row",
+  "tabStyle": {},
+  "tabActiveStyle": {},
+  "defaultItem": 1,
+  "carouselInterval": 3,
+  "transition": {
+    "mode": "fadeInAndOut",
+    "duration": 500
+  },
+  "items": [
+    {
+      "frontendId": [
+        "tt3llivwvsw0"
+      ],
+      "iconStyle": {},
+      "activeIconStyle": {},
+      "name": "1"
     },
-    "items": [
-      {
-        "name": "本周",
-        "frontendId": []
-      },
-      {
-        "name": "本年",
-        "frontendId": []
-      },
-      {
-        "name": "累计",
-        "frontendId": []
-      }
-    ]
-  }
+    {
+      "frontendId": [
+        "tt3lq4q1p8g0"
+      ],
+      "iconStyle": {},
+      "activeIconStyle": {},
+      "postDataList": [],
+      "name": "2"
+    }
+  ],
+  "defaultTab": 1,
+  "hasTransition": true,
+  "carousel": false
 }
 ```
 
-# Schema说明
-
-## Schema
-| 参数名称 | 参数说明 | 数据类型 | 是否必填 | 默认值 |
-|--|--|--|--| -- |
-| type | 组件类型 |  String | 是 | 固定：tabs |
-| frontendId |  组件id，后端自动生成 | String | 是 |  |
-| width | 组件宽度 | String/Number | 否 | 100 |
-| height | 组件高度 | String/Number | 否 | 100 |
-| left | 组件离父极左边距离 | String/Number | 否 | 0 |
-| top | 组件离父极顶部距离 | String/Number | 否 | 0 |
-| zIndex | 组件层级 | Number | 否 | 99 |
-| config | 组件配置 | Object | 否 | 参考Schema.config |
-
-## Schema.config
-| 参数名称 | 参数说明 | 数据类型 | 是否必填 | 默认值 |
-|--|--|--|--| -- |
-| direction | tab排布 row，column | String | 否 | row |
-| tabsType | tab类型 type1，type2，type3 | String | 否 | type1 |
-| tabStyle | tab样式 | Object | 否 |  |
-| tabActiveStyle | tab高亮时的样式 | Object | 否 |  |
-| defaultTab | 默认当前显示tab 下标 | number | 否 | 1 |
+## schema说明:
+| 名称 | 描述 | 类型 | 必填 | 默认值 | 备注 |
+|--|--|--|--|--|--|
+| direction | tab排布 row，column | string | 否 | row |
+| tabsType | tab类型 type1，type2 | string | 否 | type1 |
+| tabStyle | tab样式 | object | 否 |  |
+| tabActiveStyle | tab高亮时的样式 | object | 否 |  |
+| defaultItem | 默认当前显示tab 下标 | number | 否 | 1 |
 | tabsType | tab的类型(type1、type2) | string | 否 | type1 |
-| autoHeight | 自动高度 | bool | 否 | false |
-| items | 子组件（参考items说明） | Array | 是 |  |
+| autoHeight | 是否高度自适应 | bool | 否 | false |
+| hideTabs | 是否隐藏选项卡 | bool | 否 | false |
+| carousel | 是否开启轮播功能 | boolean | 否 | false | |
+| carouselInterval | 轮播时间间隔（秒） | number | 否 | 10 | |
+| hasTransition | 是否开启过渡动画 | boolean | 否 | false | |
+| transition | 过渡动画配置 参考transition说明）| object | 否 | | |
+| items | 子组件（参考items说明） | array | 是 |  |
 
-### Schema.config.items
-| 参数名称 | 参数说明 | 数据类型 | 是否必填 | 默认值 |
-|--|--|--|--| -- |
-| iconType | 图标类型 img，antd | String | 否 | |
-| iconStyle | 图标样式 | Object | 否 |  |
-| activeIconStyle | tab高亮时的图标样式 | Object | 否 |  |
-| icon | iconType - img：需要传图片url；antd：antd的icon type |  String | 否 |  |
-| activeIcon | tab高亮时的icon， iconType - img：需要传图片url；antd：antd的icon type |  String | 否 |  |
-| name | tab名称 |  String |  |
-| formatter | 格式化字符串 | String | 否 |  |
-| frontendId | 子组件 id | Array | 是 |  |
-| postDataList | 子组件传参 | Array | 否 |  |
+### config.transition:
+| 名称 | 描述 | 类型 | 必填 | 默认值 | 备注 |
+|--|--|--|--|--|--|
+| mode | 动画类型 | string | 否 | fadeInAndOut |  |
+| duration | 过渡时间（毫秒） | number | 否 | 500 | |
+
+### config.items
+| 名称 | 描述 | 类型 | 必填 | 默认值 | 备注 |
+|--|--|--|--|--|--|
+| frontendId | 子组件 id | array | 是 |  |  |
+| name | tab名称 |  string |  |  |
+| formatter | tab名称格式化字符串 |  string |  |  |
+| icon | 图标url |  string | 否 |  |  |
+| iconStyle | 图标样式 | object | 否 |  |  |
+| activeIcon | 图标url |  string | 否 |  |  |
+| activeIconStyle | tab高亮时的图标样式 | object | 否 |  |  |
+| postDataList | 子组件传参 | array | 否 |  |  |
 
 ### Schema.config.items.postDataList.postDataMap
-| 参数名称 | 参数说明 | 数据类型 | 是否必填 | 默认值 |
-|--|--|--|--| -- |
-| frontendId | 子组件 id | Array | 是 |  |
-| updateData | frontendId对应子组件的传参 | object | 否 |  |
-
-
-# 备注
+| 名称 | 描述 | 类型 | 必填 | 默认值 | 备注 |
+|--|--|--|--|--|--|
+| frontendId | 子组件 id | array | 是 |  |  |
+| updateData | frontendId对应子组件的传参 | object | 否 |  |  |
