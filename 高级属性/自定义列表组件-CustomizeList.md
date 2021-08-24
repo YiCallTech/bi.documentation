@@ -95,36 +95,49 @@
 
 
 ## schema说明：
-| 名称 | 描述 | 必填 | 类型 |备注 |
+| 名称 | 描述 | 必填 | 类型 | 备注 |
 |--|--|--|--|--|
 | pageSize | 每页数量 | 是 | number |  |
 | structure | 列表结构 | 是 | array | 详见structure |
-| autoScroll | 自动滚动配置 | 否 | bool |  |
-| scrollLoadMore | 滚动加载更多数据 | 否 | bool |  |
+| autoScroll | 自动滚动 | 否 | bool |  |
+| scrollLoadMore | 滚动加载更多数据 | 否 | bool | 选中时listMaxHeight时必填，否则无法触发数据加载 |
 | stopScrollingWhenHovered | 鼠标移入停止滚动 | 否 | bool |  |
-| pagination | 分页配置，同 antd.pagination | 否 | object |  |
+| pagination | 分页器配置 | 否 | object | 详见pagination |
 | headStyles | 表头样式 | 否 | object | react-css |
 | headItemStyles | 表头子项样式 | 否 | object | react-css |
 | listStyles | 列表区域样式 | 否 | object | react-css |
-| listRowStyles | 列表行样式 | 否 | object | react-css，列表间的间隔应该使用listRowInterval，不建议在listRowStyles中使用margin，会造成动画卡顿 |
+| listRowStyles | 列表每行样式 | 否 | object | react-css，列表间的间隔应该使用listRowInterval，不建议在listRowStyles中使用margin，会造成动画卡顿 |
 | listOddRowStyles | 列表奇数行样式 | 否 | object | react-css |
 | listEvenRowStyles | 列表偶数行样式 | 否 | object | react-css |
 | listColStyles | 列表子项样式 | 否 | object | react-css |
-| listMaxHeight | 列表区域最高高度 | 否 | number | scrollLoadMore时必填，否则无法触发数据加载 |
+| listMaxHeight | 列表区域最高高度 | 否 | number |  |
 | listRowInterval | 列表每行之间的间隔 | 否 | number |  |
-| rowKey | 列表的key | 否 | string | 默认showId |
+| rowKey | 列表每行的key | 否 | string | 默认showId |
 | rowAction | 列表每行点击事件 | 否 | object | 详见 [事件](/交互事件.md) |
 | data | 列表静态数据 | 否 | array | 参考接口返回数据 |
 
 
 #### structure：
-| 名称 | 描述 | 必填 | 类型 |备注 |
+| 名称 | 描述 | 必填 | 类型 | 备注 |
 |--|--|--|--|--|
-| name | 名称 | 是 | string | 表头名称 |
-| key | key值 | 是 | string | 唯一key值，用于data中的数据提取 |
-| styles | 每项样式 | 否 | object | react-css |
+| name | 名称 | 否 | string | 表头名称 |
+| key | key值 | 是 | string | 唯一的key，用于data中的数据提取 |
+| styles | 子项样式 | 否 | object | react-css |
 | template | html标签模拟 | 否 | string | 可配置html标签，并将"{}"替换为接口返回中的数据 |
-| colAction | 列表每列点击事件 | 否 | object | 详见 [事件](/交互事件.md) |
+| colAction | 子项点击事件 | 否 | object | 详见 [事件](/交互事件.md) |
+
+
+#### pagination：
+| 名称 | 描述 | 必填 | 类型 | 默认 |
+|--|--|--|--|--|
+| show | 是否展示分页器 | 否 | bool | false |
+| hideOnSinglePage | 只有一页时是否隐藏分页器 | 否 | bool | false |
+| responsive | 当 size 未指定时，是否根据屏幕宽度自动调整尺寸 | 否 | bool | false |
+| showLessItems | 是否显示较少页面内容 | 否 | bool | false |
+| showQuickJumper | 是否可以快速跳转至某页 | 否 | bool | false |
+| showTotal | 是否显示列表总数 | 否 | bool | false |
+| simple | 是否显示为简单分页 | 否 | bool | false |
+| smallSize | 是否显示为小尺寸分页 | 否 | bool | true |
 
 
 ## 接口返回说明:
