@@ -131,6 +131,7 @@
 | 名称 | 描述 | 必填 | 类型 | 默认 |
 |--|--|--|--|--|
 | show | 是否展示分页器 | 否 | bool | false |
+| theme | 分页器主题，深色：dark、浅色：light | 否 | string | dark |
 | hideOnSinglePage | 只有一页时是否隐藏分页器 | 否 | bool | false |
 | responsive | 当 size 未指定时，是否根据屏幕宽度自动调整尺寸 | 否 | bool | false |
 | showLessItems | 是否显示较少页面内容 | 否 | bool | false |
@@ -138,6 +139,7 @@
 | showTotal | 是否显示列表总数 | 否 | bool | false |
 | simple | 是否显示为简单分页 | 否 | bool | false |
 | smallSize | 是否显示为小尺寸分页 | 否 | bool | true |
+| style | 分页器样式 | 否 | object |  |
 
 
 ## 接口返回说明:
