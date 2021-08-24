@@ -38,6 +38,8 @@
 ## Schema.config
 | 参数名称 | 参数说明 | 数据类型 | 是否必填 | 默认值 |
 |--|--|--|--| -- |
+| backgroundPic | 背景图 | String| 否 |  |
+| color | 文本颜色 | String| 否 |  |
 | speed | 移动速度 | Number| 否 | 1 |
 | radius | 标签半径 | Number | 否 | 60 |
 
