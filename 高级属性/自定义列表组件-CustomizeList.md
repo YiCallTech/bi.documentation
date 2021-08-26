@@ -98,11 +98,13 @@
 | 名称 | 描述 | 必填 | 类型 | 备注 |
 |--|--|--|--|--|
 | pageSize | 每页数量 | 是 | number |  |
+| theme | 分页器主题，深色：dark、浅色：light | 否 | string | 默认dark |
 | structure | 列表结构 | 是 | array | 详见structure |
 | autoScroll | 自动滚动 | 否 | bool |  |
 | scrollLoadMore | 滚动加载更多数据 | 否 | bool | 选中时listMaxHeight时必填，否则无法触发数据加载 |
 | stopScrollingWhenHovered | 鼠标移入停止滚动 | 否 | bool |  |
 | pagination | 分页器配置 | 否 | object | 详见pagination |
+| loading | 加载动画配置 | 否 | object | 详见loading |
 | headStyles | 表头样式 | 否 | object | react-css |
 | headItemStyles | 表头子项样式 | 否 | object | react-css |
 | listStyles | 列表区域样式 | 否 | object | react-css |
@@ -110,6 +112,7 @@
 | listOddRowStyles | 列表奇数行样式 | 否 | object | react-css |
 | listEvenRowStyles | 列表偶数行样式 | 否 | object | react-css |
 | listColStyles | 列表子项样式 | 否 | object | react-css |
+| fixedHeight | 固定高度 | 否 | bool | 默认false |
 | listMaxHeight | 列表区域最高高度 | 否 | number |  |
 | listRowInterval | 列表每行之间的间隔 | 否 | number |  |
 | rowKey | 列表每行的key | 否 | string | 默认showId |
@@ -131,7 +134,6 @@
 | 名称 | 描述 | 必填 | 类型 | 默认 |
 |--|--|--|--|--|
 | show | 是否展示分页器 | 否 | bool | false |
-| theme | 分页器主题，深色：dark、浅色：light | 否 | string | dark |
 | hideOnSinglePage | 只有一页时是否隐藏分页器 | 否 | bool | false |
 | responsive | 当 size 未指定时，是否根据屏幕宽度自动调整尺寸 | 否 | bool | false |
 | showLessItems | 是否显示较少页面内容 | 否 | bool | false |
@@ -140,6 +142,15 @@
 | simple | 是否显示为简单分页 | 否 | bool | false |
 | smallSize | 是否显示为小尺寸分页 | 否 | bool | true |
 | style | 分页器样式 | 否 | object |  |
+
+
+#### loading：
+| 名称 | 描述 | 必填 | 类型 | 默认 |
+|--|--|--|--|--|
+| show | 是否展示加载动画 | 否 | bool | true |
+| size | 组件大小，small、default、large | 否 | string | default |
+| tip | 提示文案 | 否 | string |  |
+| style | 加载动画图标样式 | 否 | object |  |
 
 
 ## 接口返回说明:
