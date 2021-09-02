@@ -103,6 +103,7 @@
 | autoScroll | 自动滚动 | 否 | bool |  |
 | scrollLoadMore | 滚动加载更多数据 | 否 | bool | 选中时listMaxHeight时必填，否则无法触发数据加载 |
 | stopScrollingWhenHovered | 鼠标移入停止滚动 | 否 | bool |  |
+| total | 总数配置 | 否 | object | 详见total |
 | pagination | 分页器配置 | 否 | object | 详见pagination |
 | loading | 加载动画配置 | 否 | object | 详见loading |
 | headStyles | 表头样式 | 否 | object | react-css |
@@ -128,6 +129,15 @@
 | styles | 子项样式 | 否 | object | react-css |
 | template | html标签模拟 | 否 | string | 可配置html标签，并将"{}"替换为接口返回中的数据 |
 | colAction | 子项点击事件 | 否 | object | 详见 [事件](/交互事件.md) |
+
+
+#### total：
+| 名称 | 描述 | 必填 | 类型 | 默认 |
+|--|--|--|--|--|
+| show | 是否展示分页器 | 否 | bool | false |
+| prefix | 前缀 | 否 | bool | 共 |
+| suffix | 后缀 | 否 | bool | 条 |
+| style | 分页器样式 | 否 | object |  |
 
 
 #### pagination：
