@@ -92,13 +92,14 @@
 # 备注：
 支持的功能: 分页刷新数据（pagination）、定时刷新数据（refreshInterval）、自动滚动加载更多数据（autoScroll + scrollLoadMore）、自动滚动（autoScroll）、滚动加载更多数据（scrollLoadMore）、滚动时鼠标移入暂停滚动（stopScrollingWhenHovered）
 数据的更新模式（只取一种）:定时刷新数据 > 分页刷新数据 > 自动滚动加载更多数据 > 滚动加载更多数据
+structure.key为order时默认展示序列号
 
 
 ## schema说明：
 | 名称 | 描述 | 必填 | 类型 | 备注 |
 |--|--|--|--|--|
 | pageSize | 每页数量 | 是 | number |  |
-| theme | 分页器主题，深色：dark、浅色：light | 否 | string | 默认dark |
+| theme | 主题，深色：dark、浅色：light | 否 | string | 默认dark |
 | structure | 列表结构 | 是 | array | 详见structure |
 | autoScroll | 自动滚动 | 否 | bool |  |
 | scrollLoadMore | 滚动加载更多数据 | 否 | bool | 选中时listMaxHeight时必填，否则无法触发数据加载 |
@@ -134,9 +135,9 @@
 #### total：
 | 名称 | 描述 | 必填 | 类型 | 默认 |
 |--|--|--|--|--|
-| show | 是否展示分页器 | 否 | bool | false |
-| prefix | 前缀 | 否 | bool | 共 |
-| suffix | 后缀 | 否 | bool | 条 |
+| show | 是否展示总数 | 否 | bool | false |
+| prefix | 前缀 | 否 | string | 共 |
+| suffix | 后缀 | 否 | string | 条 |
 | style | 分页器样式 | 否 | object |  |
 
 

@@ -136,6 +136,7 @@
 | startKey | 开始时间的key | 是 | string | 默认：startTime |
 | endKey | 结束时间的key | 是 | string | 默认：endTime |
 | noUnix | 是否是毫秒时间戳 | 否 | bool | 默认：true |
+| defaultValue | 默认值 | 否 | string/array | select多选、treeSelect多选、checkbox、datePicker为数组 |
 | style | 分页器样式 | 否 | object |  |
 
 
