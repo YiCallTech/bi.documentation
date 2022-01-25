@@ -90,8 +90,10 @@
 ```
 
 # 备注：
-支持的功能: 分页刷新数据（pagination）、定时刷新数据（refreshInterval）、自动滚动加载更多数据（autoScroll + scrollLoadMore）、自动滚动（autoScroll）、滚动加载更多数据（scrollLoadMore）、滚动时鼠标移入暂停滚动（stopScrollingWhenHovered）
+支持的功能: 分页刷新数据（pagination）、定时刷新数据（refreshInterval）、自动滚动加载更多数据（autoScroll + scrollLoadMore）、自动滚动（autoScroll）、滚动加载更多数据（scrollLoadMore）、滚动时鼠标移入暂停滚动（stopScrollingWhenHovered）、高亮首行并刷新指定组件（highlightFirstRow）
+
 数据的更新模式（只取一种）:定时刷新数据 > 分页刷新数据 > 自动滚动加载更多数据 > 滚动加载更多数据
+
 structure.key为order时默认展示序列号
 
 
@@ -107,6 +109,8 @@ structure.key为order时默认展示序列号
 | total | 总数配置 | 否 | object | 详见total |
 | pagination | 分页器配置 | 否 | object | 详见pagination |
 | loading | 加载动画配置 | 否 | object | 详见loading |
+| empty | 数据为空时的配置 | 否 | object | 详见empty |
+| highlightFirstRow | 高亮首行的配置 | 否 | object | 详见highlightFirstRow |
 | headStyles | 表头样式 | 否 | object | react-css |
 | headItemStyles | 表头子项样式 | 否 | object | react-css |
 | listStyles | 列表区域样式 | 否 | object | react-css |
@@ -162,6 +166,21 @@ structure.key为order时默认展示序列号
 | size | 组件大小，small、default、large | 否 | string | default |
 | tip | 提示文案 | 否 | string |  |
 | style | 加载动画图标样式 | 否 | object |  |
+
+
+#### empty：
+| 名称 | 描述 | 必填 | 类型 | 默认 |
+|--|--|--|--|--|
+| show | 是否展示数据为空时的提示 | 否 | bool | true |
+| style | 数据为空时的样式 | 否 | object |  |
+
+
+#### highlightFirstRow：
+| 名称 | 描述 | 必填 | 类型 | 默认 |
+|--|--|--|--|--|
+| show | 是否高亮第一行 | 否 | bool | true |
+| style | 加载动画图标样式 | 否 | object |  |
+| postDataList | 高亮时需要更新的组件列表 | 否 | array |  |
 
 
 ## 接口返回说明:
